@@ -1,0 +1,21 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    template = """
+    <html>
+      <ul>
+      {% %}
+        <li> {{ }} </li>
+      {% %}
+      </ul>
+    </html>
+    """
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6402#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 02 Mar 2021 23:40:20 UTC
+record: -1
