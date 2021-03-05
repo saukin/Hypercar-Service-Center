@@ -3,14 +3,14 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/268504/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Tue, 02 Mar 2021 22:39:23 UTC
+update_date: Thu, 04 Mar 2021 21:49:00 UTC
 stages:
 - id: 470
   step: 7694
   is_completed: true
 - id: 471
   step: 7695
-  is_completed: false
+  is_completed: true
 - id: 472
   step: 7696
   is_completed: false
