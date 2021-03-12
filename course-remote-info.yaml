@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/268504/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Thu, 04 Mar 2021 21:49:00 UTC
+update_date: Fri, 12 Mar 2021 21:21:36 UTC
 stages:
 - id: 470
   step: 7694
@@ -114,12 +114,14 @@ topics:
     theory_id: 6661
   - title: Class instances
     theory_id: 6669
-  - title: Frameworks
-    theory_id: 6701
   - title: Methods
     theory_id: 6931
   - title: Regexps basics
     theory_id: 7580
+  - title: Libraries
+    theory_id: 8504
+  - title: Frameworks
+    theory_id: 6701
   - title: PyCharm basics
     theory_id: 6193
   - title: Pip
