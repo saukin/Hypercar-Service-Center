@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-       <title>Chapter {{ n_ticket }}</title>
+       <title>{{ Service }}</title>
 </head>
 <body>
 <p>Your ticket for </p>
 <p>
   {{ service }}
 </p>
-<p>12</p>
+<div>Your number is {{ tNumber }}</div>
+<div>Please wait around {{ wait_time }} minutes</div>
+<!--<button><a href="/menu">BACK</a></button>-->
+<a href="/menu">menu</a>
+<a href="/processing">operator menu</a>
+
 </body>
 </html>

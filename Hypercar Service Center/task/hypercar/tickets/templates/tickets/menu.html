@@ -16,6 +16,13 @@
 <!--        <a href="/get_ticket/inflate_tires"></a>-->
 <!--        <a href="/get_ticket/diagnostic"></a>-->
     </ul>
+    <h2>Client waiting:</h2>
+    <ul>
+      {% for k, v in tickets.items %}
+      <li>
+        {{ k }} : {{ v }}
+      </li>
+      {% endfor %}
     </ul>
 </body>
 </html>

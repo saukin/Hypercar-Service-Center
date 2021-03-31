@@ -745,6 +745,89 @@ files:
         """ Reports success """
         print("#educational_plugin test OK")
   learner_created: false
+- name: hypercar/tickets/templates/tickets/get_ticket.html
+  visible: true
+  text: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+           <title>{{ Service }}</title>
+    </head>
+    <body>
+    <!--<p>Your ticket for </p>-->
+    <!--<p>-->
+    <!--  {{ service }}-->
+    <!--</p>-->
+    <div>Your number is {{ tNumber }}</div>
+    <div>Please wait around {{ wait_time }} minutes</div>
+    <!--<button><a href="/menu">BACK</a></button>-->
+
+    </body>
+    </html>
+  learner_created: true
+- name: hypercar/__init__.py
+  visible: true
+  learner_created: true
+- name: hypercar/tickets/tickets_logic.py
+  visible: true
+  text: |
+    times = {'Change oil': 2, 'Inflate tyres': 5, 'Diagnostics': 30, }
+    _all = [0]
+    menu = {'change_oil': "Change oil", 'inflate_tires': "Inflate tyres", 'diagnostic': "Diagnostics", }
+    tickets = {'Change oil': 0, 'Inflate tyres': 0, 'Diagnostics': 0, }
+
+
+    def get_waiting_time(service_type):
+        time = 0
+        if _all[0] < 2:
+            return time
+        for k, v in tickets.items():
+            if times[k] <= times[service_type]:
+                time += times[k] * v
+        return time
+  learner_created: true
+- name: hypercar/tickets/templates/tickets/menu.html
+  visible: true
+  text: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> MENU </title>
+    </head>
+    <body>
+        <h1>CUSTOMER MENU</h1>
+        <ul>
+          {% for k, v in menu.items %}
+          <li>
+            <a href="/get_ticket/{{ k }}">Service: {{ v }}</a>
+          </li>
+          {% endfor %}
+    <!--        <a href="/get_ticket/change_oil"></a>-->
+    <!--        <a href="/get_ticket/inflate_tires"></a>-->
+    <!--        <a href="/get_ticket/diagnostic"></a>-->
+        </ul>
+        <h2>Client waiting:</h2>
+        <ul>
+          {% for k, v in tickets.items %}
+          <li>
+            {{ k }} : {{ v }}
+          </li>
+          {% endfor %}
+        </ul>
+    </body>
+    </html>
+  learner_created: true
+- name: __init__.py
+  visible: true
+  learner_created: true
+- name: hypercar/tickets/templates/tickets/operator menu.html
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/85/stages/473/implement#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 28 Mar 2021 15:05:25 UTC
+record: 4

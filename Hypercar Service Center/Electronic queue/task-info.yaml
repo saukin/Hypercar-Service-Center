@@ -738,24 +738,6 @@ files:
     </body>
     </html>
   learner_created: true
-- name: hypercar/tickets/templates/tickets/service.html
-  visible: true
-  text: |
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Chapter {{ n_ticket }}</title>
-    </head>
-    <body>
-    <p>Your ticket for </p>
-    <p>
-      {{ service }}
-    </p>
-    <p>12</p>
-    </body>
-    </html>
-  learner_created: true
 - name: hypercar/tickets/templates/tickets/menu.html
   visible: true
   text: |
@@ -781,6 +763,18 @@ files:
     </body>
     </html>
   learner_created: true
+- name: hypercar/__init__.py
+  visible: true
+  learner_created: true
+- name: __init__.py
+  visible: true
+  learner_created: true
+- name: hypercar/tickets/tickets_logic.py
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/85/stages/472/implement#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 26 Mar 2021 00:09:56 UTC
+record: 3
